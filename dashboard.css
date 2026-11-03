@@ -1,0 +1,1169 @@
+
+/* =================================
+   KADOKITA ADMIN DASHBOARD
+   ================================= */
+
+.kk-admin-dashboard {
+    --kk-cream: #FFF8F0;
+    --kk-dusty-pink: #DFA6B8;
+    --kk-burgundy: #8F3D56;
+    --kk-soft-pink: #F5DDE5;
+    --kk-dark-brown: #3E3033;
+
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background: var(--kk-cream);
+    color: var(--kk-dark-brown);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+/* SIDEBAR */
+
+.kk-admin-dashboard .kk-admin-sidebar {
+    flex: 0 0 250px;
+    width: 250px;
+    min-height: 100vh;
+    padding: 28px 18px;
+    box-sizing: border-box;
+    background: var(--kk-burgundy);
+    color: #FFFFFF;
+}
+
+.kk-admin-dashboard .kk-admin-brand {
+    padding: 0 12px 28px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kk-admin-dashboard .kk-admin-brand h2 {
+    margin: 0 0 8px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.kk-admin-dashboard .kk-admin-brand p {
+    margin: 0;
+    color: var(--kk-soft-pink);
+    font-size: 13px;
+}
+
+/* MENU SIDEBAR */
+
+.kk-admin-dashboard .kk-admin-menu {
+    margin-top: 24px;
+}
+
+.kk-admin-dashboard .kk-menu-heading {
+    margin: 25px 12px 10px;
+    color: #F5DDE5;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.kk-admin-dashboard .kk-menu-link {
+    display: block;
+    margin: 5px 0;
+    padding: 12px 14px;
+    border-radius: 9px;
+    color: #FFFFFF;
+    font-size: 14px;
+    text-decoration: none;
+    transition: background 0.2s ease, color 0.2s ease;
+}
+
+.kk-admin-dashboard .kk-menu-link:hover,
+.kk-admin-dashboard .kk-menu-link.active {
+    background: var(--kk-soft-pink);
+    color: var(--kk-burgundy);
+}
+
+/* AREA KONTEN */
+
+.kk-admin-dashboard .kk-admin-main {
+    flex: 1;
+    min-width: 0;
+    padding: 28px 32px 32px;
+    box-sizing: border-box;
+}
+
+/* HEADER */
+
+.kk-admin-dashboard .kk-admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 30px;
+    padding-bottom: 22px;
+    border-bottom: 1px solid #EBD9D9;
+}
+
+.kk-admin-dashboard .kk-admin-header h1 {
+    margin: 0 0 8px;
+    color: var(--kk-dark-brown);
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.kk-admin-dashboard .kk-admin-header p {
+    margin: 0;
+    color: #78686B;
+    line-height: 1.6;
+}
+
+.kk-admin-dashboard .kk-admin-user {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 600;
+}
+
+.kk-admin-dashboard .kk-admin-user img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* KARTU SAMBUTAN */
+
+.kk-admin-dashboard .kk-admin-welcome {
+    margin-bottom: 28px;
+    padding: 28px;
+    border: 1px solid #F0D8DF;
+    border-radius: 16px;
+    background: var(--kk-soft-pink);
+}
+
+.kk-admin-dashboard .kk-admin-welcome h2 {
+    margin: 0 0 0px;
+    color: var(--kk-burgundy);
+    font-size: 24px;
+}
+
+.kk-admin-dashboard .kk-admin-welcome p {
+    margin: 0 0 15px;
+    line-height: 1.8;
+}
+
+/* KARTU MENU */
+
+.kk-admin-dashboard .kk-admin-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.kk-admin-dashboard .kk-admin-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 155px;
+    padding: 24px;
+    box-sizing: border-box;
+    border: 1px solid #EBD9D9;
+    border-radius: 14px;
+    background: #FFFFFF;
+    color: var(--kk-dark-brown);
+    text-decoration: none;
+    box-shadow: 0 4px 14px rgba(62, 48, 51, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.kk-admin-dashboard .kk-admin-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(62, 48, 51, 0.1);
+}
+
+.kk-admin-dashboard .kk-admin-card span {
+    margin-bottom: 12px;
+    color: var(--kk-burgundy);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.kk-admin-dashboard .kk-admin-card strong {
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.kk-admin-dashboard .kk-admin-card p {
+    margin: 0;
+    color: #78686B;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 900px) {
+    .kk-admin-dashboard .kk-admin-sidebar {
+        flex-basis: 210px;
+        width: 210px;
+        padding: 24px 12px;
+    }
+
+    .kk-admin-dashboard .kk-admin-main {
+        padding: 24px;
+    }
+
+    .kk-admin-dashboard .kk-admin-cards {
+        gap: 14px;
+    }
+}
+
+/* RESPONSIVE HP */
+
+@media (max-width: 600px) {
+    .kk-admin-dashboard {
+        flex-direction: column;
+    }
+
+    .kk-admin-dashboard .kk-admin-sidebar {
+        width: 100%;
+        min-height: auto;
+        flex-basis: auto;
+        padding: 20px 16px;
+    }
+
+    .kk-admin-dashboard .kk-admin-brand {
+        padding-bottom: 16px;
+    }
+
+    .kk-admin-dashboard .kk-admin-menu {
+        margin-top: 12px;
+    }
+
+    .kk-admin-dashboard .kk-menu-heading {
+        margin-top: 16px;
+    }
+
+    .kk-admin-dashboard .kk-admin-main {
+        padding: 22px 16px;
+    }
+
+    .kk-admin-dashboard .kk-admin-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .kk-admin-dashboard .kk-admin-header h1 {
+        font-size: 26px;
+    }
+
+    .kk-admin-dashboard .kk-admin-welcome {
+        padding: 22px;
+    }
+
+    .kk-admin-dashboard .kk-admin-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* Ikon menu aktif */
+.kk-menu-link.active i {
+    color: #8F3D56;
+}
+
+
+
+
+/* IKON SIDEBAR KADOKITA */
+
+.kk-admin-dashboard .kk-admin-menu .kk-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.kk-admin-dashboard .kk-admin-menu .kk-menu-link i {
+    display: inline-block;
+    width: 18px;
+    flex-shrink: 0;
+    text-align: center;
+    font-size: 16px;
+    color: #FFFFFF !important;
+    opacity: 1 !important;
+}
+
+.kk-admin-dashboard .kk-admin-menu .kk-menu-link span {
+    flex: 1;
+}
+
+/* Saat menu aktif atau diarahkan kursor */
+.kk-admin-dashboard .kk-admin-menu .kk-menu-link:hover i,
+.kk-admin-dashboard .kk-admin-menu .kk-menu-link.active i {
+    color: #8F3D56 !important;
+}
+
+
+
+
+
+
+/* =================================
+   TABEL DAFTAR PENGGUNA
+   ================================= */
+
+.kk-admin-dashboard .kk-admin-welcome table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 24px;
+    background: #FFFFFF;
+    border: 1px solid #EBD9D9;
+    border-radius: 10px;
+    overflow: hidden;
+    font-size: 14px;
+}
+
+/* Header tabel */
+.kk-admin-dashboard .kk-admin-welcome table thead th {
+    padding: 15px 16px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+    border: 1px solid #8F3D56;
+}
+
+/* Isi tabel */
+.kk-admin-dashboard .kk-admin-welcome table tbody td {
+    padding: 15px 16px;
+    color: #3E3033;
+    border: 1px solid #EBD9D9;
+    vertical-align: middle;
+    line-height: 1.6;
+}
+
+/* Warna baris selang-seling */
+.kk-admin-dashboard .kk-admin-welcome table tbody tr:nth-child(even) {
+    background: #FFF8F0;
+}
+
+/* Efek saat kursor diarahkan ke baris */
+.kk-admin-dashboard .kk-admin-welcome table tbody tr:hover {
+    background: #F5DDE5;
+}
+
+/* Tautan aksi dalam tabel */
+.kk-admin-dashboard .kk-admin-welcome table tbody td a {
+    color: #8F3D56;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.kk-admin-dashboard .kk-admin-welcome table tbody td a:hover {
+    text-decoration: underline;
+}
+
+/* Tabel nyaman dibaca di layar kecil */
+@media (max-width: 768px) {
+    .kk-admin-dashboard .kk-admin-welcome table {
+        font-size: 13px;
+    }
+
+    .kk-admin-dashboard .kk-admin-welcome table thead th,
+    .kk-admin-dashboard .kk-admin-welcome table tbody td {
+        padding: 11px 12px;
+    }
+}
+
+
+
+
+/* TABEL DAFTAR PRODUK */
+
+.kk-admin-dashboard .kk-admin-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #EBD9D9;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.kk-admin-dashboard .kk-admin-product-table {
+    width: 100%;
+    min-width: 650px;
+    margin: 0;
+    border-collapse: collapse;
+    background: #FFFFFF;
+    font-size: 14px;
+}
+
+.kk-admin-dashboard .kk-admin-product-table thead th {
+    padding: 15px 14px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    text-align: left;
+    white-space: nowrap;
+    border: 1px solid #8F3D56;
+}
+
+.kk-admin-dashboard .kk-admin-product-table tbody td {
+    padding: 14px;
+    border: 1px solid #EBD9D9;
+    color: #3E3033;
+    vertical-align: middle;
+}
+
+.kk-admin-dashboard .kk-admin-product-table tbody tr:nth-child(even) {
+    background: #FFF8F0;
+}
+
+.kk-admin-dashboard .kk-admin-product-table tbody tr:hover {
+    background: #F5DDE5;
+}
+
+.kk-admin-dashboard .kk-admin-product-table .kk-product-thumb {
+    display: block;
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+/* Dashboard Kategori Produk KadoKita */
+.kk-admin-kategori {
+    background: #FFF8F0;
+    padding: 28px;
+    border-radius: 14px;
+    color: #3E3033;
+}
+
+.kk-admin-kategori h2 {
+    color: #8F3D56;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    margin: 0 0 8px;
+}
+
+.kk-admin-kategori h3 {
+    color: #8F3D56;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    margin: 26px 0 12px;
+}
+
+.kk-admin-kategori p,
+.kk-admin-kategori label {
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.kk-admin-kategori form {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin: 0;
+}
+
+.kk-admin-kategori input[type="text"] {
+    min-width: 0;
+    padding: 10px 12px;
+    border: 1px solid #DFA6B8;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.kk-admin-kategori input[name="nama_kategori"]:not([placeholder]) {
+    width: 180px;
+}
+
+.kk-admin-kategori button {
+    padding: 9px 14px;
+    border: none;
+    border-radius: 7px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.kk-admin-kategori button:hover {
+    background: #6F2D41;
+}
+
+.kk-admin-kategori table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    background: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.kk-admin-kategori table th {
+    background: #8F3D56;
+    color: #FFFFFF;
+    padding: 14px 12px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.kk-admin-kategori table td {
+    padding: 12px;
+    border-bottom: 1px solid #F0D8DF;
+    color: #3E3033;
+    vertical-align: middle;
+}
+
+.kk-admin-kategori table tbody tr:nth-child(even) {
+    background: #FFF8F0;
+}
+
+.kk-admin-kategori table tbody tr:hover {
+    background: #F5DDE5;
+}
+
+.kk-admin-kategori table tr:last-child td {
+    border-bottom: none;
+}
+
+.kk-admin-kategori table td form {
+    gap: 6px;
+}
+
+.kk-admin-kategori table td input[type="text"] {
+    width: 180px;
+    padding: 7px 9px;
+}
+
+@media (max-width: 768px) {
+    .kk-admin-kategori {
+        padding: 16px;
+        overflow-x: auto;
+    }
+
+    .kk-admin-kategori table {
+        min-width: 700px;
+    }
+}
+
+
+
+
+/* Dashboard Cek Pesanan KadoKita */
+.kk-admin-pesanan {
+    background: #FFF8F0;
+    padding: 28px;
+    border-radius: 14px;
+    color: #3E3033;
+}
+
+.kk-admin-pesanan h2,
+.kk-admin-pesanan h3 {
+    color: #8F3D56;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-pesanan-ringkasan {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+    margin: 24px 0 30px;
+}
+
+.kk-pesanan-kartu {
+    padding: 20px;
+    border-radius: 12px;
+    background: #FFFFFF;
+    border: 1px solid #F0D8DF;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.kk-pesanan-kartu span {
+    color: #3E3033;
+    font-size: 13px;
+}
+
+.kk-pesanan-kartu strong {
+    color: #8F3D56;
+    font-size: 28px;
+}
+
+.kk-pesanan-tabel {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 10px;
+    background: #FFFFFF;
+}
+
+.kk-pesanan-tabel table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.kk-pesanan-tabel th {
+    background: #8F3D56;
+    color: #FFFFFF;
+    padding: 14px;
+    text-align: left;
+}
+
+.kk-pesanan-tabel td {
+    padding: 14px;
+    border-bottom: 1px solid #F0D8DF;
+}
+
+.kk-pesanan-tabel tbody tr:nth-child(even) {
+    background: #FFF8F0;
+}
+
+@media (max-width: 900px) {
+    .kk-pesanan-ringkasan {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .kk-admin-pesanan {
+        padding: 16px;
+    }
+
+    .kk-pesanan-ringkasan {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}
+
+
+
+/* Pencarian dan filter pesanan */
+.kk-pesanan-filter {
+    display: grid;
+    grid-template-columns: minmax(200px, 2fr) minmax(180px, 1fr);
+    gap: 12px;
+    margin: 18px 0;
+}
+
+.kk-pesanan-filter input,
+.kk-pesanan-filter select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px 14px;
+    border: 1px solid #E8C7D2;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.kk-pesanan-filter input:focus,
+.kk-pesanan-filter select:focus {
+    outline: 2px solid #DFA6B8;
+    border-color: #8F3D56;
+}
+
+@media (max-width: 600px) {
+    .kk-pesanan-filter {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+/* Pengaturan Web KadoKita */
+.kk-admin-pengaturan {
+    background: #FFF8F0;
+    padding: 28px;
+    border-radius: 14px;
+    color: #3E3033;
+}
+
+.kk-admin-pengaturan h2,
+.kk-admin-pengaturan h3 {
+    color: #8F3D56;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-pengaturan-form {
+    display: grid;
+    gap: 10px;
+    max-width: 650px;
+}
+
+.kk-pengaturan-form label {
+    margin-top: 8px;
+    font-weight: 500;
+    color: #3E3033;
+}
+
+.kk-pengaturan-form input,
+.kk-pengaturan-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #E8C7D2;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-pengaturan-form button {
+    width: fit-content;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-pengaturan-form button:hover {
+    background: #713044;
+}
+
+.kk-pengaturan-sukses {
+    padding: 12px;
+    border-radius: 8px;
+    background: #F5DDE5;
+    color: #713044;
+}
+
+
+
+
+
+/* Profil Admin KadoKita */
+.kk-admin-profil {
+    background: #FFF8F0;
+    padding: 28px;
+    border-radius: 14px;
+    color: #3E3033;
+}
+
+.kk-admin-profil h2,
+.kk-admin-profil h3 {
+    color: #8F3D56;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-profil-form {
+    display: grid;
+    gap: 10px;
+    max-width: 650px;
+}
+
+.kk-profil-form label {
+    margin-top: 8px;
+    font-weight: 500;
+}
+
+.kk-profil-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #E8C7D2;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-profil-form input[readonly] {
+    background: #F5DDE5;
+}
+
+.kk-profil-form button {
+    width: fit-content;
+    margin-top: 12px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-profil-sukses {
+    padding: 12px;
+    border-radius: 8px;
+    background: #F5DDE5;
+    color: #713044;
+}
+
+
+
+
+/* Foto Profil Admin */
+.kk-foto-profil-preview {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #DFA6B8;
+    margin: 8px 0;
+}
+
+.kk-profil-form input[type="file"] {
+    padding: 10px;
+    background: #FFFFFF;
+    border: 1px solid #E8C7D2;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Perataan Foto Profil dan Form Admin */
+.kk-admin-profil .kk-profil-form {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
+.kk-admin-profil .kk-profil-form > label:first-child {
+    text-align: center;
+}
+
+.kk-admin-profil .kk-foto-profil-preview,
+.kk-admin-profil .kk-profil-form > img {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 8px auto 16px;
+}
+
+.kk-admin-profil .kk-profil-form input,
+.kk-admin-profil .kk-profil-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-admin-profil .kk-profil-form input[type="file"] {
+    margin-bottom: 4px;
+}
+
+.kk-admin-profil .kk-profil-form button {
+    justify-self: start;
+}
+
+
+
+
+/* Tampilan pilihan hapus foto profil */
+.kk-admin-profil .kk-hapus-foto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin: 8px 0 18px;
+    cursor: pointer;
+}
+
+.kk-admin-profil .kk-hapus-foto input[type="checkbox"] {
+    width: auto;
+    margin: 0;
+}
+
+
+
+.kk-profil-form select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #E8C7D2;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+
+
+/* ===== DASHBOARD ADMIN KADOKITA ===== */
+
+.kk-admin-welcome {
+    background: #FFFFFF;
+    border: 1px solid #F0DCE3;
+    border-left: 5px solid #8F3D56;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 12px rgba(62, 48, 51, 0.06);
+}
+
+.kk-admin-welcome h2 {
+    color: #3E3033;
+    font-size: 24px;
+    margin: 0 0 10px;
+}
+
+.kk-admin-welcome p {
+    color: #6F6064;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.kk-admin-identitas {
+    background: #FFFFFF;
+    border: 1px solid #F0DCE3;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    box-shadow: 0 3px 12px rgba(62, 48, 51, 0.06);
+}
+
+.kk-admin-identitas h3 {
+    color: #3E3033;
+    font-size: 20px;
+    margin: 0 0 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #F0DCE3;
+}
+
+.kk-admin-identitas-foto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.kk-admin-identitas-foto img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #F5DDE5;
+}
+
+.kk-admin-identitas-info {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+/* Kotak kelima: Jenis Kelamin berada di tengah */
+.kk-admin-identitas-info p:last-child {
+    grid-column: 1 / -1;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-admin-identitas-info p {
+    background: #FFF8F0;
+    border: 1px solid #F0DCE3;
+    border-radius: 8px;
+    padding: 14px;
+    margin: 0;
+    color: #3E3033;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.kk-admin-identitas-info strong {
+    display: block;
+    color: #8F3D56;
+    margin-bottom: 5px;
+}
+
+.kk-admin-link-profil {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 11px 18px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.kk-admin-link-profil:hover {
+    background: #713044;
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+    .kk-admin-identitas-info {
+        grid-template-columns: 1fr;
+    }
+
+    .kk-admin-welcome,
+    .kk-admin-identitas {
+        padding: 18px;
+    }
+}
+
+
+/* Kotak Pesanan dibuat sepanjang dua kolom */
+.kk-admin-dashboard .kk-admin-card[href*="bagian=pesanan"] {
+    grid-column: 1 / -1;
+    width: 100%;
+}
+
+
+/* Membuat pemilih warna terlihat jelas */
+.kk-pengaturan-form input[type="color"] {
+    display: block;
+    appearance: auto;
+    -webkit-appearance: color;
+    width: 100px;
+    height: 48px;
+    padding: 4px;
+    margin: 8px 0 20px;
+    border: 1px solid #DFA6B8;
+    border-radius: 8px;
+    background: #FFFFFF;
+    cursor: pointer;
+}
+
+
+
+
+/* Membuat form Pengaturan Web memenuhi lebar container */
+.kk-admin-pengaturan {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-admin-pengaturan .kk-pengaturan-form {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-admin-pengaturan .kk-pengaturan-form label,
+.kk-admin-pengaturan .kk-pengaturan-form input,
+.kk-admin-pengaturan .kk-pengaturan-form textarea,
+.kk-admin-pengaturan .kk-pengaturan-form button {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.kk-admin-pengaturan .kk-pengaturan-form input[type="color"] {
+    width: 100%;
+    height: 48px;
+    padding: 4px;
+    margin: 8px 0 18px;
+}
+
+.kk-admin-pengaturan .kk-pengaturan-form label {
+    margin-top: 10px;
+    margin-bottom: 6px;
+}
+
+.kk-admin-pengaturan .kk-pengaturan-form button {
+    margin-top: 12px;
+}
+
+
+
+
+.kk-pengaturan-sukses {
+    animation: kk-notifikasi-hilang 3s forwards;
+}
+
+@keyframes kk-notifikasi-hilang {
+    0%, 80% {
+        opacity: 1;
+        visibility: visible;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+
+.kk-pengaturan-sukses {
+    animation: kk-notifikasi-hilang 3s forwards;
+    margin: 0 0 16px;
+}
+
+@keyframes kk-notifikasi-hilang {
+    0%, 80% {
+        opacity: 1;
+        max-height: 100px;
+        margin-bottom: 16px;
+        overflow: hidden;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+}
+
+
+
+
+/* Font Poppins untuk Dashboard Admin KadoKita */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Font Poppins untuk dashboard admin */
+body.page-template-page-dashboard-admin {
+    font-family: 'Poppins', sans-serif;
+}
+
+body.page-template-page-dashboard-admin *:not(i):not(.fa):not([class^="fa-"]):not([class*=" fa-"]) {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+
+/* Notifikasi berhasil memperbarui profil */
+.kk-profil-sukses {
+    animation: kk-profil-hilang 3s forwards;
+    margin: 0 0 16px;
+    overflow: hidden;
+}
+
+@keyframes kk-profil-hilang {
+    0%, 80% {
+        opacity: 1;
+        max-height: 100px;
+        margin-bottom: 16px;
+    }
+    100% {
+        opacity: 0;
+        max-height: 0;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+}

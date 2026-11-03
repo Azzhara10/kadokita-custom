@@ -1,0 +1,1047 @@
+
+/* ========================================
+   DASHBOARD CUSTOMER KADOKITA
+   Mengikuti layout Dashboard Admin
+   ======================================== */
+
+.kk-customer-dashboard {
+    display: flex;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #FFF8F0;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.kk-customer-dashboard * {
+    box-sizing: border-box;
+}
+
+/* SIDEBAR */
+
+.kk-customer-sidebar {
+    flex: 0 0 250px;
+    width: 250px;
+    padding: 28px 18px;
+    background: #8F3D56;
+    color: #FFFFFF;
+}
+
+.kk-customer-brand {
+    padding: 0 10px 24px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.kk-customer-brand h2 {
+    margin: 0 0 6px;
+    color: #FFFFFF;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.kk-customer-brand p {
+    margin: 0;
+    color: #F5DDE5;
+    font-size: 13px;
+}
+
+/* MENU SIDEBAR */
+
+.kk-customer-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.kk-customer-menu-link {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 13px 14px;
+    border-radius: 8px;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.kk-customer-menu-link i {
+    width: 18px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.kk-customer-menu-link:hover,
+.kk-customer-menu-link.active {
+    background: #F5DDE5;
+    color: #8F3D56;
+}
+
+/* AREA KONTEN */
+
+.kk-customer-main {
+    flex: 1;
+    min-width: 0;
+    padding: 32px;
+}
+
+/* HEADER KONTEN */
+
+.kk-customer-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #E8D9D8;
+}
+
+.kk-customer-header h1 {
+    margin: 0 0 8px;
+    color: #3E3033;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.kk-customer-header p {
+    margin: 0;
+    color: #75666A;
+    font-size: 14px;
+}
+
+.kk-customer-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #3E3033;
+    font-size: 14px;
+    font-weight: 500;
+    white-space: nowrap;
+}
+
+.kk-customer-user i {
+    color: #8F3D56;
+    font-size: 28px;
+}
+
+/* KARTU SELAMAT DATANG */
+
+.kk-customer-welcome {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #FFFFFF;
+    border-left: 5px solid #8F3D56;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(62, 48, 51, 0.05);
+}
+
+.kk-customer-welcome h2 {
+    margin: 0 0 12px;
+    color: #3E3033;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.kk-customer-welcome p {
+    margin: 0 0 20px;
+    color: #75666A;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.kk-customer-welcome a,
+.kk-customer-card > a {
+    display: inline-block;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.kk-customer-welcome a:hover,
+.kk-customer-card > a:hover {
+    background: #743047;
+    color: #FFFFFF;
+}
+
+/* KARTU KONTEN */
+
+.kk-customer-card {
+    padding: 24px;
+    margin-bottom: 24px;
+    background: #FFFFFF;
+    border: 1px solid #F0E3E3;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(62, 48, 51, 0.04);
+}
+
+.kk-customer-card h2 {
+    margin: 0 0 12px;
+    color: #3E3033;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.kk-customer-card p {
+    color: #75666A;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* KOMPONEN WOOCOMMERCE DI DALAM DASHBOARD */
+
+.kk-customer-card .woocommerce {
+    width: 100%;
+}
+
+.kk-customer-card .woocommerce-MyAccount-navigation {
+    display: none;
+}
+
+.kk-customer-card .woocommerce-MyAccount-content {
+    float: none;
+    width: 100%;
+}
+
+.kk-customer-card .woocommerce table.shop_table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.kk-customer-card .woocommerce a.button,
+.kk-customer-card .woocommerce button.button {
+    background: #8F3D56;
+    color: #FFFFFF;
+    border-radius: 8px;
+}
+
+.kk-customer-card .woocommerce a.button:hover,
+.kk-customer-card .woocommerce button.button:hover {
+    background: #743047;
+    color: #FFFFFF;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+    .kk-customer-dashboard {
+        flex-direction: column;
+    }
+
+    .kk-customer-sidebar {
+        flex: auto;
+        width: 100%;
+        padding: 20px 16px;
+    }
+
+    .kk-customer-brand {
+        padding-bottom: 16px;
+        margin-bottom: 16px;
+    }
+
+    .kk-customer-menu {
+        gap: 5px;
+    }
+
+    .kk-customer-main {
+        width: 100%;
+        padding: 22px 16px;
+    }
+
+    .kk-customer-header {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .kk-customer-header h1 {
+        font-size: 24px;
+    }
+
+    .kk-customer-welcome,
+    .kk-customer-card {
+        padding: 20px;
+    }
+
+    .kk-customer-card {
+        overflow-x: auto;
+    }
+}
+
+
+
+
+/* IDENTITAS CUSTOMER */
+
+.kk-customer-identity-description {
+    margin-bottom: 24px;
+    color: #75666A;
+    font-size: 14px;
+}
+
+.kk-customer-identity-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.kk-customer-identity-item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 18px;
+    background: #FFF8F0;
+    border: 1px solid #F5DDE5;
+    border-radius: 10px;
+    overflow-wrap: anywhere;
+}
+
+.kk-customer-identity-item span {
+    color: #75666A;
+    font-size: 13px;
+}
+
+.kk-customer-identity-item strong {
+    color: #3E3033;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.kk-customer-edit-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    padding: 12px 20px;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.kk-customer-edit-button:hover {
+    background: #743047;
+    color: #FFFFFF;
+}
+
+@media (max-width: 600px) {
+    .kk-customer-identity-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* FOTO PROFIL CUSTOMER - POSISI TENGAH */
+
+.kk-customer-profile-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 10px 0 28px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid #F0E3E3;
+}
+
+.kk-customer-profile-photo img.kk-customer-avatar {
+    display: block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border: 4px solid #F5DDE5;
+    border-radius: 50%;
+}
+
+.kk-customer-profile-name {
+    text-align: center;
+}
+
+.kk-customer-profile-name h2 {
+    margin: 0 0 6px;
+    color: #3E3033;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.kk-customer-profile-name p {
+    margin: 0;
+    color: #8F3D56;
+    font-size: 14px;
+}
+
+.kk-customer-identity > h2 {
+    margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+    .kk-customer-profile-photo img.kk-customer-avatar {
+        width: 100px;
+        height: 100px;
+    }
+
+    .kk-customer-profile-name h2 {
+        font-size: 19px;
+    }
+}
+
+
+/* FORM PROFIL CUSTOMER */
+
+.kk-customer-profile-success,
+.kk-customer-profile-error {
+    padding: 12px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.kk-customer-profile-success {
+    background: #EAF6EA;
+    color: #28643A;
+}
+
+.kk-customer-profile-error {
+    background: #FCEBEC;
+    color: #9A2936;
+}
+
+.kk-customer-profile-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin: 24px 0;
+}
+
+.kk-customer-profile-fields label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #3E3033;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.kk-customer-profile-fields input,
+.kk-customer-profile-fields select {
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 12px;
+    border: 1px solid #E8D9D8;
+    border-radius: 8px;
+    background: #FFFFFF;
+    color: #3E3033;
+    font: inherit;
+}
+
+.kk-customer-profile-fields input:focus,
+.kk-customer-profile-fields select:focus {
+    outline: 2px solid #DFA6B8;
+    border-color: #8F3D56;
+}
+
+.kk-customer-profile-fields input[readonly] {
+    background: #F5F0EF;
+    color: #75666A;
+    cursor: not-allowed;
+}
+
+.kk-customer-profile-form button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    font: inherit;
+    cursor: pointer;
+}
+
+.kk-customer-profile-form button:hover {
+    background: #743047;
+}
+
+@media (max-width: 600px) {
+    .kk-customer-profile-fields {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* UPLOAD FOTO PROFIL CUSTOMER */
+
+
+.kk-customer-photo-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+    margin: 24px 0;
+    text-align: left;
+}
+
+
+.kk-customer-photo-upload label {
+    color: #3E3033;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.kk-customer-avatar-preview {
+    display: block;
+    width: 120px;
+    height: 120px;
+    border: 4px solid #F5DDE5;
+    border-radius: 50%;
+    object-fit: cover;
+    align-self: center;
+}
+
+
+.kk-customer-photo-upload {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-customer-photo-upload input[type="file"] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #E8D9D8;
+    border-radius: 8px;
+    background: #FFF8F0;
+    color: #3E3033;
+    font-size: 13px;
+}
+
+
+.kk-customer-photo-upload small {
+    color: #75666A;
+    font-size: 12px;
+    text-align: left;
+}
+
+
+/* HALAMAN UBAH KATA SANDI CUSTOMER */
+
+.kk-password-card {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-password-card h2 {
+    color: #3E3033;
+    margin-bottom: 8px;
+}
+
+.kk-password-description {
+    color: #75666A;
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.kk-password-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+.kk-password-form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #3E3033;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.kk-password-form input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    border: 1px solid #E8D9D8;
+    border-radius: 8px;
+    background: #FFF8F0;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+}
+
+.kk-password-form input:focus {
+    outline: none;
+    border-color: #8F3D56;
+}
+
+.kk-password-form small {
+    color: #75666A;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.kk-password-form button {
+    width: fit-content;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.kk-password-form button:hover {
+    background: #713047;
+}
+
+.kk-password-back {
+    width: fit-content;
+    color: #8F3D56;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+.kk-password-back:hover {
+    text-decoration: underline;
+}
+
+.kk-password-success,
+.kk-password-error {
+    padding: 12px 14px;
+    border-radius: 8px;
+    font-size: 13px;
+}
+
+.kk-password-success {
+    background: #EDF7ED;
+    color: #27632A;
+}
+
+.kk-password-error {
+    background: #FCEBED;
+    color: #8F3D56;
+}
+
+
+/* RIWAYAT PESANAN CUSTOMER */
+
+.kk-orders-description {
+    margin-bottom: 24px;
+    color: #75666A;
+    font-size: 14px;
+}
+
+.kk-orders-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.kk-orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #3E3033;
+    font-size: 13px;
+}
+
+.kk-orders-table th {
+    padding: 14px 12px;
+    background: #F5DDE5;
+    text-align: left;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.kk-orders-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #F0E3E5;
+    vertical-align: middle;
+}
+
+.kk-order-status {
+    display: inline-block;
+    padding: 5px 9px;
+    border-radius: 6px;
+    background: #FFF8F0;
+    color: #8F3D56;
+    font-size: 12px;
+}
+
+.kk-order-detail-button,
+.kk-orders-empty a {
+    display: inline-block;
+    padding: 8px 13px;
+    border-radius: 7px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+.kk-order-detail-button:hover,
+.kk-orders-empty a:hover {
+    background: #713047;
+    color: #FFFFFF;
+}
+
+.kk-orders-empty {
+    padding: 35px 20px;
+    text-align: center;
+    border: 1px dashed #DFA6B8;
+    border-radius: 10px;
+    background: #FFF8F0;
+}
+
+.kk-orders-empty i {
+    color: #8F3D56;
+    font-size: 32px;
+}
+
+.kk-orders-empty p {
+    margin: 14px 0;
+    color: #3E3033;
+}
+
+/* KERANJANG BELANJA CUSTOMER */
+
+.kk-customer-card .woocommerce {
+    width: 100%;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+}
+
+.kk-customer-card .woocommerce-info {
+    padding: 18px 20px 18px 50px;
+    margin: 20px 0 28px;
+    border-top: 3px solid #DFA6B8;
+    border-radius: 8px;
+    background: #FFF8F0;
+    color: #3E3033;
+    font-size: 14px;
+}
+
+.kk-customer-card .woocommerce-info::before {
+    color: #8F3D56;
+    top: 18px;
+}
+
+.kk-customer-card .return-to-shop {
+    margin-top: 24px;
+}
+
+.kk-customer-card .return-to-shop .button,
+.kk-customer-card .woocommerce a.button {
+    display: inline-block;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease;
+}
+
+.kk-customer-card .return-to-shop .button:hover,
+.kk-customer-card .woocommerce a.button:hover {
+    background: #713047;
+    color: #FFFFFF;
+}
+
+
+/* ========================================
+   KERANJANG BELANJA KADOKITA
+======================================== */
+
+.kk-customer-card .woocommerce-cart-form {
+    width: 100%;
+    margin: 0;
+}
+
+/* Tabel keranjang */
+.kk-customer-card .woocommerce-cart-form table.shop_table {
+    width: 100%;
+    border: 1px solid #F0E3E5;
+    border-radius: 12px;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: #FFFFFF;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+/* Header tabel */
+.kk-customer-card .woocommerce-cart-form table.shop_table thead th {
+    padding: 16px 12px;
+    background: #FFF8F0;
+    color: #3E3033;
+    border-bottom: 1px solid #F0E3E5;
+    font-weight: 600;
+    text-align: left;
+}
+
+/* Isi tabel */
+.kk-customer-card .woocommerce-cart-form table.shop_table td {
+    padding: 18px 12px;
+    border-top: none;
+    border-bottom: 1px solid #F0E3E5;
+    vertical-align: middle;
+}
+
+/* Foto produk */
+.kk-customer-card .woocommerce-cart-form td.product-thumbnail {
+    width: 100px;
+    min-width: 100px;
+}
+
+.kk-customer-card .woocommerce-cart-form td.product-thumbnail img {
+    display: block;
+    width: 90px !important;
+    height: 90px !important;
+    max-width: 90px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+/* Nama produk */
+.kk-customer-card .woocommerce-cart-form td.product-name {
+    min-width: 180px;
+    color: #3E3033;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.7;
+}
+
+.kk-customer-card .woocommerce-cart-form td.product-name a {
+    color: #3E3033;
+    text-decoration: none;
+}
+
+.kk-customer-card .woocommerce-cart-form td.product-name a:hover {
+    color: #8F3D56;
+}
+
+/* Harga dan subtotal */
+.kk-customer-card .woocommerce-cart-form td.product-price,
+.kk-customer-card .woocommerce-cart-form td.product-subtotal {
+    color: #8F3D56;
+    white-space: nowrap;
+    font-weight: 500;
+}
+
+/* Tombol hapus produk */
+.kk-customer-card .woocommerce-cart-form td.product-remove a.remove {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #F5DDE5;
+    color: #8F3D56 !important;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.kk-customer-card .woocommerce-cart-form td.product-remove a.remove:hover {
+    background: #8F3D56;
+    color: #FFFFFF !important;
+}
+
+/* Kotak jumlah produk */
+.kk-customer-card .woocommerce-cart-form td.product-quantity .quantity input.qty {
+    width: 65px;
+    min-height: 38px;
+    padding: 6px;
+    border: 1px solid #E8D9D8;
+    border-radius: 7px;
+    background: #FFF8F0;
+    color: #3E3033;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Baris kupon dan update keranjang */
+.kk-customer-card .woocommerce-cart-form td.actions {
+    padding: 16px;
+    background: #FFFFFF;
+}
+
+.kk-customer-card .woocommerce-cart-form .coupon {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+.kk-customer-card .woocommerce-cart-form .coupon input.input-text {
+    width: 180px;
+    min-height: 42px;
+    padding: 10px 12px;
+    border: 1px solid #E8D9D8;
+    border-radius: 7px;
+    background: #FFF8F0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+}
+
+.kk-customer-card .woocommerce-cart-form button.button,
+.kk-customer-card .wc-proceed-to-checkout a.checkout-button {
+    min-height: 42px;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #8F3D56;
+    color: #FFFFFF;
+    font-family: 'Poppins', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.kk-customer-card .woocommerce-cart-form button.button:hover,
+.kk-customer-card .wc-proceed-to-checkout a.checkout-button:hover {
+    background: #713047;
+    color: #FFFFFF;
+}
+
+.kk-customer-card .woocommerce-cart-form button[name="update_cart"] {
+    float: right;
+}
+
+/* Ringkasan belanja di sebelah kanan */
+.kk-customer-card .cart-collaterals {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 28px;
+}
+
+.kk-customer-card .cart-collaterals .cart_totals {
+    float: none;
+    width: 100%;
+    max-width: 480px;
+    padding: 24px;
+    border: 1px solid #F0E3E5;
+    border-radius: 12px;
+    background: #FFF8F0;
+    box-sizing: border-box;
+}
+
+.kk-customer-card .cart_totals h2 {
+    margin: 0 0 18px;
+    color: #3E3033;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.kk-customer-card .cart_totals table.shop_table {
+    border: none;
+    background: transparent;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+}
+
+.kk-customer-card .cart_totals table.shop_table th,
+.kk-customer-card .cart_totals table.shop_table td {
+    padding: 12px 8px;
+    border-top: 1px solid #E8D9D8;
+    color: #3E3033;
+}
+
+.kk-customer-card .cart_totals table.shop_table tr.order-total th,
+.kk-customer-card .cart_totals table.shop_table tr.order-total td {
+    color: #8F3D56;
+    font-weight: 700;
+}
+
+/* Tombol checkout */
+.kk-customer-card .wc-proceed-to-checkout {
+    padding: 12px 0 0;
+}
+
+.kk-customer-card .wc-proceed-to-checkout a.checkout-button {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Tampilan HP */
+@media (max-width: 768px) {
+    .kk-customer-card .woocommerce-cart-form table.shop_table {
+        font-size: 12px;
+    }
+
+    .kk-customer-card .woocommerce-cart-form td.product-thumbnail img {
+        width: 65px !important;
+        height: 65px !important;
+        max-width: 65px;
+    }
+
+    .kk-customer-card .woocommerce-cart-form td.product-thumbnail {
+        width: 70px;
+        min-width: 70px;
+    }
+
+    .kk-customer-card .woocommerce-cart-form td.product-name {
+        min-width: 130px;
+    }
+
+    .kk-customer-card .woocommerce-cart-form td,
+    .kk-customer-card .woocommerce-cart-form th {
+        padding: 10px 6px;
+    }
+
+    .kk-customer-card .cart-collaterals .cart_totals {
+        max-width: 100%;
+        padding: 18px;
+    }
+
+    .kk-customer-card .woocommerce-cart-form .coupon input.input-text {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* SEMBUNYIKAN FORM KUPON */
+.kk-customer-card .woocommerce-cart-form td.actions .coupon {
+    display: none !important;
+}
+
+/* Sembunyikan alamat pengiriman dan Change address */
+.kk-customer-card .cart_totals .woocommerce-shipping-destination,
+.kk-customer-card .cart_totals .shipping-calculator-button,
+.kk-customer-card .cart_totals .woocommerce-shipping-calculator {
+    display: none !important;
+}
